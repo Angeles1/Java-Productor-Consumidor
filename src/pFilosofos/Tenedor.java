@@ -15,12 +15,12 @@ public class Tenedor extends Thread{
                 wait();                
             }
         }catch(Exception ex){}
-        System.out.println("Filosofo "+i+ " coge tenedor"+id);
+        System.out.println("Filósofo "+i+ " coge tenedor "+id);
     }
     
     public synchronized void sTenedor(int i){
         libre=true;
-        System.out.println("Filosofo "+i+ " suelta el tenedor"+id);
+        System.out.println("Filósofo "+i+ " suelta el tenedor "+id);
         notify();
     }
 
